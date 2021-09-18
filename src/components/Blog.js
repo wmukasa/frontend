@@ -35,7 +35,7 @@ const Blog =() =>{
     useEffect(()=>{
         const fetchData = async () =>{
             try{
-                const res = await axios.get(`https://williamwedshaffy.herokuapp.com//api/wed/featured`);
+                const res = await axios.get(`https://williamwedshaffy.herokuapp.com/api/wed/featured`);
                 setFeaturedBlog(res.data[0]);
                 console.log(res.data);
             }
@@ -48,7 +48,7 @@ const Blog =() =>{
     useEffect(()=>{
         const fetchBlogs = async () =>{
             try{
-                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/wed/`);
+                const res = await axios.get(`https://williamwedshaffy.herokuapp.com/api/wed/`);
                 setBlogs(res.data);
                 console.log(res.data);
             }
